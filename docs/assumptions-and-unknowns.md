@@ -1,4 +1,4 @@
-# Assumptions and Unknowns — Documind (working name)
+# Assumptions and Unknowns — Tikéo (formerly Documind)
 
 _Last updated: 2026-11-23 (consolidated after Phase 1 desk research)_
 
@@ -57,8 +57,8 @@ Research sources: `research/market-research.md` (E-numbers), `research/competito
 |---|---|---|---|---|
 | U1 | Current alternatives and pricing | **Partly answered** (R-4, R-5). AccounTech AI and Konta unverified. No product trials yet. | Business strategist | Demos / trials |
 | U2 | Market size and willingness to pay in CI | Open; no defensible basis found | Business strategist / Founder | Interviews; INS / CGECI census |
-| U3 | Whether the name is free to use | **Risk raised** (R-7). OAPI not searched. | Founder + IP agent | Naming sprint, then formal OAPI/WIPO search (D-006) |
-| U4 | Domain (.com, .ci, other) | Depends on the final name | Founder | After naming |
+| U3 | Whether the name is free to use | **Tikéo chosen (D-013)** on a desk scan only. OAPI, WIPO, EUIPO and USPTO not searched. | Founder + IP agent | Formal search; early OAPI filing |
+| U4 | Domain (.com, .ci, other) | tikeo.com is on the GoDaddy aftermarket (price not retrieved); tikeo.ci and tikeo.app did not resolve (inconclusive). No WHOIS run. | Founder | WHOIS check; any purchase needs founder approval |
 | U5 | Waitlist fields and storage mechanism | Fields proposed (email, role, optional WhatsApp, opt-in). Storage open. | Founder | D-004 + D-010 |
 | U6 | Analytics approach and cookie consent needs | Open | Growth analyst | `/growth-measurement` |
 | U7 | Planned product launch timing (affects "coming soon" wording) | Open | Founder | Founder input |
@@ -66,5 +66,5 @@ Research sources: `research/market-research.md` (E-numbers), `research/competito
 | U9 | Contact channels expected locally (WhatsApp vs email; local phone) | Open | Founder | Founder input; interviews |
 | U10 | Whether third-party tools can access FNE data on received invoices | Open | Tax adviser | Future phase |
 | U11 | Number of formal SMEs and freelancers in CI | Open (RGEE-CI results unpublished) | — | INS / CGECI |
-| U12 | International horizon (does a US/EU conflict matter within 3 years?) | Open | Founder | D-011 |
+| U12 | International horizon (does a US/EU conflict matter within 3 years?) | Not stated; less pressing now that Documind is dropped | Founder | Founder input |
 | U13 | Budget for a formal trademark search | Open (estimate of a few hundred USD is an assumption) | Founder | Founder input |

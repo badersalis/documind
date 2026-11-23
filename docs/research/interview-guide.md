@@ -1,4 +1,4 @@
-# Problem Interview Guide and 5-Second Test — Documind (working name)
+# Problem Interview Guide and 5-Second Test — Tikéo
 
 _Prepared 2026-11-23 · Phase 1 · For the founder to run · Language: French (English gloss in italics) · Status: ready to use_
 

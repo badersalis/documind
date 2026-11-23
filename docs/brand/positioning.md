@@ -1,6 +1,6 @@
-# Brand Positioning — Documind (working name)
+# Brand Positioning — Tikéo
 
-_Prepared 2026-11-23 · Phase 1 · Owner: Director · Status: **Option A approved by founder 2026-11-23 (D-012)**; product promises in §10 pending · Name-agnostic: "[Nom]" stands for the final name (see `naming-sprint.md`)_
+_Prepared 2026-11-23 · Phase 1 · Owner: Director · Status: **Option A approved by founder 2026-11-23 (D-012)**; product promises in §10 pending · Name: Tikéo (D-013)_
 
 **Inputs:** `project-brief.md`, `research/market-research.md`, `research/competitor-analysis.md`, `research/customer-personas.md`, decisions D-003, D-008 and D-009.
 **Evidence basis:** desk research only. No customer interviews have been done. Every statement below is a **hypothesis to test**, not a validated insight. Copy is in French (the launch locale), with an English gloss in italics.
@@ -8,7 +8,7 @@ _Prepared 2026-11-23 · Phase 1 · Owner: Director · Status: **Option A approve
 ---
 
 ## 1. Recommendation in one paragraph
-Position [Nom] as **the bridge between the pile of receipts and the accountant**. It turns expense documents (receipts, supplier invoices, paper or photo) into organised, reviewable data that is ready for the accountant, Sage or Excel, and it is built for Côte d'Ivoire (French, FCFA, SYSCOHADA). Lead with **order and time** (the outcome), use **SYSCOHADA/local fit** as the main proof of difference, and use **"you stay in control"** (human review, transparency) as the trust pillar. Avoid AI-first, "automatic" and compliance language altogether.
+Position Tikéo as **the bridge between the pile of receipts and the accountant**. It turns expense documents (receipts, supplier invoices, paper or photo) into organised, reviewable data that is ready for the accountant, Sage or Excel, and it is built for Côte d'Ivoire (French, FCFA, SYSCOHADA). Lead with **order and time** (the outcome), use **SYSCOHADA/local fit** as the main proof of difference, and use **"you stay in control"** (human review, transparency) as the trust pillar. Avoid AI-first, "automatic" and compliance language altogether.
 
 ---
 
@@ -24,7 +24,7 @@ Position [Nom] as **the bridge between the pile of receipts and the accountant**
 | **Reasons to believe (pre-launch)** | Local vocabulary and examples on the site; clear statements of the workflow; an honest data-handling FAQ; a founder or local presence (if confirmed). **No accuracy figures, badges, testimonials or customer counts**: none exist. | Only what we can show truthfully today |
 
 ### Positioning statement
-> **For** owner-managers, independents and their accountants in Côte d'Ivoire **who** lose hours re-keying and sorting receipts and supplier invoices, **[Nom] is** an expense-document tool **that** turns paper and photos into organised expenses, sorted into SYSCOHADA categories and ready for the accountant. **Unlike** all-in-one ERPs that ask you to change everything, or foreign tools built for euros and the French chart of accounts, **[Nom]** fits alongside how you already work (your accountant, Sage, Excel) and keeps you in control of every entry.
+> **For** owner-managers, independents and their accountants in Côte d'Ivoire **who** lose hours re-keying and sorting receipts and supplier invoices, **Tikéo is** an expense-document tool **that** turns paper and photos into organised expenses, sorted into SYSCOHADA categories and ready for the accountant. **Unlike** all-in-one ERPs that ask you to change everything, or foreign tools built for euros and the French chart of accounts, **Tikéo** fits alongside how you already work (your accountant, Sage, Excel) and keeps you in control of every entry.
 
 ---
 
@@ -93,14 +93,14 @@ The accountant path reframes pillars 1, 3 and 4 as: *« moins de saisie, plus de
 
 | # | Section | Job | Draft content (FR) |
 |---|---|---|---|
-| 1 | **Hero** | Say what it is, for whom, in 5 seconds | H1: « Vos reçus et factures, classés et prêts pour votre comptable. » · Sub: « Photographiez vos pièces justificatives : [Nom] extrait les montants, propose la bonne catégorie SYSCOHADA, et vous validez. Conçu pour les entreprises et indépendants en Côte d'Ivoire. » · CTA: « Rejoindre la liste d'attente » · Badge: « En cours de développement » · Visual: local receipt → extracted fields → category |
+| 1 | **Hero** | Say what it is, for whom, in 5 seconds | H1: « Vos reçus et factures, classés et prêts pour votre comptable. » · Sub: « Photographiez vos pièces justificatives : Tikéo extrait les montants, propose la bonne catégorie SYSCOHADA, et vous validez. Conçu pour les entreprises et indépendants en Côte d'Ivoire. » · CTA: « Rejoindre la liste d'attente » · Badge: « En cours de développement » · Visual: local receipt → extracted fields → category |
 | 2 | **Problem** | Recognition | « Reçus dans un tiroir, factures dans vos e-mails, photos sur WhatsApp… et la saisie, toujours à la dernière minute. » |
 | 3 | **How it works** (3 steps) | Make it concrete | ① Photographiez ou importez · ② Vérifiez les informations et la catégorie proposée · ③ Exportez vers votre comptable, Sage ou Excel |
 | 4 | **Pillars** | Differentiate | Ordre sans ressaisie · Conçu pour la Côte d'Ivoire · Avec vos outils · Vous gardez la main |
 | 5 | **Audiences** | Self-selection | Cards: Dirigeants de PME · Indépendants · Cabinets comptables (→ accountant path) · Équipes finance |
 | 6 | **Accountant band** | Secondary path (D-009) | « Expert-comptable ? Moins de saisie, plus de conseil. » → Use Cases / accountant section + role on the waitlist |
 | 7 | **Trust / FAQ preview** | Handle objections | Where are my documents stored? Who sees them? Can the AI make mistakes? Does it replace my accountant? Is it compatible with SYSCOHADA / Sage / Excel? (answers only after D-004/D-010) |
-| 8 | **Context** (optional) | Timeliness, no claim | « La facturation passe à l'électronique (FNE). Le moment de mettre de l'ordre dans vos dépenses. » with an explicit disclaimer that [Nom] is not an invoicing solution |
+| 8 | **Context** (optional) | Timeliness, no claim | « La facturation passe à l'électronique (FNE). Le moment de mettre de l'ordre dans vos dépenses. » with an explicit disclaimer that Tikéo is not an invoicing solution |
 | 9 | **Final CTA** | Convert | Waitlist form: email, role, optional WhatsApp, unticked opt-in, link to privacy notice |
 
 ---
