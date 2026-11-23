@@ -49,6 +49,8 @@ Research sources: `research/market-research.md` (E-numbers), `research/competito
 | R-5 | Local SMB suite prices: 15,000–90,000 FCFA/mo; EU capture tools €25–€140/mo | Vendor pages | Medium-High | — |
 | R-6 | Mobile money is the dominant payment rail (financial inclusion 88.7% in 2025) | BCEAO (E17) | Medium-High | WTP interviews |
 | R-7 | "Documind" name: USPTO filing SN 99570015 (Classes 9/42); ≥6 other Documind document-AI products; documind.ai for sale; verdict "reconsider" | Name check (aggregators; TSDR not confirmed) | Medium | Formal search (D-006) |
+| R-8 | Possible competitor not in the competitor analysis: **Akrio** (More Than Accountants Ltd) is on the CI App Store, offers receipt/invoice OCR with categorisation, and syncs to Xero, Zoho and FreeAgent. https://apps.apple.com/ci/app/akrio/id6557078369 | Naming-sprint agent, incidental find | Low-Medium (not examined) | Business strategist to profile; add to `competitor-analysis.md` |
+| R-9 | Naming shortlist: Tikéo, Recevo, Clarto (desk scan only; no register searches, WHOIS, handle or local-language checks) | `brand/naming-sprint.md` | Medium | Formal OAPI/WIPO search; Dioula/Baoulé/Bété/Nouchi check |
 
 ## Unknowns
 | ID | Item | Status | Owner | Next validation |
