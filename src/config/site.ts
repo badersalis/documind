@@ -33,7 +33,8 @@ const envMode = process.env.NEXT_PUBLIC_WAITLIST_MODE;
 export const site = {
   name: "Tikéo",
   /** Public URL, without trailing slash. Founder: set NEXT_PUBLIC_SITE_URL. */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  // `||`, not `??`: an empty value copied from .env.example must fall back too.
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000").replace(/\/$/, ""),
   /** Search engines may index the site only when this is true. */
   live: process.env.NEXT_PUBLIC_SITE_LIVE === "true",
   waitlistMode: (envMode === "live" || envMode === "paused" ? envMode : "contact") as WaitlistMode,
