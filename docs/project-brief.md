@@ -1,6 +1,6 @@
 # Project Brief — Tikéo (formerly Documind)
 
-_Last updated: 2026-11-24 (Phase 2: visual direction A approved, D-014; asset sourcing drafted) · Phase: 2 (Visual direction) · Owner: Founder_
+_Last updated: 2026-11-24 (Phase 2 done; deliverable 3 drafted: IA, French copy, waitlist UX) · Phase: 2 (Visual direction) · Owner: Founder_
 
 > **Name (decided 2026-11-23, D-013):** **Tikéo**, from *ticket de caisse*. Write it **Tikéo** (capital T, accented é) in brand and copy; use **tikeo** (no accent, lowercase) in domains, handles, code and URLs. "Documind" was the working name and is retired; the repository folder keeps its old name for now. The name is not yet trademark-cleared (see R3).
 
@@ -33,7 +33,7 @@ _Last updated: 2026-11-24 (Phase 2: visual direction A approved, D-014; asset so
 **Deliverables, in order:**
 1. Positioning, target audience and value proposition. _Done: positioning approved (D-012), name chosen (D-013)._
 2. Brand identity and visual direction. _Name chosen (Tikéo, D-013). Design research and three visual directions done (`brand/design-research.md`, `brand/visual-direction.md`); **Direction A "Le reçu vérifié" approved, é-tick wordmark approved, no photography (D-014, 2026-11-24).** Asset plan in `brand/asset-sourcing.md`. Formal trademark search still recommended before paid identity spend._
-3. Website structure, messaging and UX
+3. Website structure, messaging and UX. _First draft done: `site/information-architecture.md`, `site/page-copy-fr.md`, `site/waitlist-ux.md`. Founder review pending; D-015 open._
 4. Design and build of a polished, responsive marketing site
 5. Review for quality, accessibility, SEO, responsiveness, performance and claims
 
@@ -85,7 +85,7 @@ _Last updated: 2026-11-24 (Phase 2: visual direction A approved, D-014; asset so
 ## Evidence status
 - **Confirmed facts:** founder-stated items F1–F6 in `assumptions-and-unknowns.md`, plus founder decisions D-001 to D-003, D-006, D-008, D-009, D-012, D-013 and D-014.
 - **Assumptions, hypotheses, unknowns:** `assumptions-and-unknowns.md`
-- **Decisions:** `decision-log.md`. Open: D-004, D-005, D-007, D-010.
+- **Decisions:** `decision-log.md`. Open: D-004, D-005, D-007, D-010, D-015.
 
 ## Open questions for the founder (none block the next step)
 1. **Formal trademark search for Tikéo:** Is there budget for an OAPI + WIPO search and an early OAPI filing through an IP agent? The research assumes a few hundred USD; this is an assumption, not a quote.
@@ -100,6 +100,8 @@ _Last updated: 2026-11-24 (Phase 2: visual direction A approved, D-014; asset so
 
 **Phase 2: Brand identity and visual direction (deliverable 2), nearly done.** Direction A approved (D-014). Asset plan drafted (`brand/asset-sourcing.md`): all fonts and icons are free and open-licensed; illustrations, wordmark and icons are drawn in-house as SVG. Remaining Phase 2 work happens at build time (tokens, wordmark SVG, illustrations).
 
-**Next: deliverable 3, site structure, messaging and UX** (sitemap, page-by-page content outline in French, waitlist form UX, accountant path).
+**Deliverable 3 drafted (2026-11-24).** Site map and navigation, French copy for every page with claim flags, and the waitlist spec with a contact-only launch mode until D-010. Founder to review the copy, clear or drop the [SYS] [REV] [EXP] claim flags (the four product promises), and decide D-015.
+
+**Next: deliverable 4, design and build** (Next.js + Tailwind, tokens from D-014, French content files, waitlist in contact-only mode).
 
 **Before paid spend** on domains, logo files or print: formal OAPI + WIPO search on Tikéo (founder approval needed). **Before launch:** legal review of the waitlist (D-010).
