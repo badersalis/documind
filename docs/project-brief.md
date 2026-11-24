@@ -1,6 +1,6 @@
 # Project Brief — Tikéo (formerly Documind)
 
-_Last updated: 2026-11-24 (Phase 2 done; deliverable 3 drafted: IA, French copy, waitlist UX) · Phase: 2 (Visual direction) · Owner: Founder_
+_Last updated: 2026-11-24 (deliverable 4 started: site built in Direction A, contact-only waitlist) · Phase: 2 (Visual direction) · Owner: Founder_
 
 > **Name (decided 2026-11-23, D-013):** **Tikéo**, from *ticket de caisse*. Write it **Tikéo** (capital T, accented é) in brand and copy; use **tikeo** (no accent, lowercase) in domains, handles, code and URLs. "Documind" was the working name and is retired; the repository folder keeps its old name for now. The name is not yet trademark-cleared (see R3).
 
@@ -34,7 +34,7 @@ _Last updated: 2026-11-24 (Phase 2 done; deliverable 3 drafted: IA, French copy,
 1. Positioning, target audience and value proposition. _Done: positioning approved (D-012), name chosen (D-013)._
 2. Brand identity and visual direction. _Name chosen (Tikéo, D-013). Design research and three visual directions done (`brand/design-research.md`, `brand/visual-direction.md`); **Direction A "Le reçu vérifié" approved, é-tick wordmark approved, no photography (D-014, 2026-11-24).** Asset plan in `brand/asset-sourcing.md`. Formal trademark search still recommended before paid identity spend._
 3. Website structure, messaging and UX. _First draft done: `site/information-architecture.md`, `site/page-copy-fr.md`, `site/waitlist-ux.md`. Founder review pending; D-015 open._
-4. Design and build of a polished, responsive marketing site
+4. Design and build of a polished, responsive marketing site. _First build done (2026-11-24): all 8 routes, French copy with claim flags, waitlist in contact-only mode, launch gate (`npm run check:launch`). See `README.md`._
 5. Review for quality, accessibility, SEO, responsiveness, performance and claims
 
 **Pages:** Home · How It Works · Features · Use Cases (with an accountant section) · FAQ (trust-heavy) · Contact / Join the Waitlist · Privacy notice · Pricing (only if a pricing strategy exists, D-007)
@@ -102,6 +102,6 @@ _Last updated: 2026-11-24 (Phase 2 done; deliverable 3 drafted: IA, French copy,
 
 **Deliverable 3 drafted (2026-11-24).** Site map and navigation, French copy for every page with claim flags, and the waitlist spec with a contact-only launch mode until D-010. Founder to review the copy, clear or drop the [SYS] [REV] [EXP] claim flags (the four product promises), and decide D-015.
 
-**Next: deliverable 4, design and build** (Next.js + Tailwind, tokens from D-014, French content files, waitlist in contact-only mode).
+**Deliverable 4 first build done (2026-11-24).** Next.js 16 site in Direction A at the repository root. Not deployed. Remaining before launch: founder inputs (claims, contact, publisher details, D-015), deployment to Vercel (preview, noindex), then deliverable 5 (QA: accessibility, Lighthouse on mid-range Android, claims review).
 
 **Before paid spend** on domains, logo files or print: formal OAPI + WIPO search on Tikéo (founder approval needed). **Before launch:** legal review of the waitlist (D-010).
