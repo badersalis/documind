@@ -7,20 +7,22 @@ import { site } from "@/config/site";
 import "./globals.css";
 
 // Self-hosted at build time by next/font: no request to Google from visitors.
+// The "latin" subset already covers French (é è à ç œ « » and U+202F); latin-ext
+// would add ~85 KB of preloaded font for nothing (QA 2026-11-24).
 const display = Schibsted_Grotesk({
   variable: "--font-schibsted",
-  subsets: ["latin", "latin-ext"],
-  weight: ["600", "700"],
+  subsets: ["latin"],
+  weight: "700",
   display: "swap",
 });
 const text = Inter({
   variable: "--font-inter",
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   display: "swap",
 });
 const mono = IBM_Plex_Mono({
   variable: "--font-plex-mono",
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   weight: "400",
   display: "swap",
   preload: false,

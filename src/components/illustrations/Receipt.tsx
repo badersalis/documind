@@ -87,7 +87,7 @@ export function ReviewCard({
         <span className="text-muted">{v.categoryHint}</span>
       </div>
       {showStamp ? (
-        <span className="stamp-land absolute -bottom-5 -right-1.5 rotate-[-8deg] rounded-md border-[2.5px] border-stamp bg-white/90 px-2.5 py-1 font-display text-[13px] font-bold text-stamp">
+        <span className="stamp-land absolute -bottom-5 right-2 rotate-[-8deg] sm:-right-1.5 rounded-md border-[2.5px] border-stamp bg-white/90 px-2.5 py-1 font-display text-[13px] font-bold text-stamp">
           {v.stamp}
         </span>
       ) : null}
@@ -98,8 +98,8 @@ export function ReviewCard({
 /** Hero scene (I1): receipt beside its review card, with the signature motion. */
 export function ReceiptScene({ s, label }: { s: Sample; label: string }) {
   return (
-    <figure className="animate-sweep m-0" role="img" aria-label={label}>
-      <div className="grid grid-cols-1 items-center gap-6 min-[440px]:grid-cols-2 min-[440px]:gap-4">
+    <figure className="animate-sweep m-0">
+      <div role="img" aria-label={label} className="grid grid-cols-1 items-center gap-6 min-[440px]:grid-cols-2 min-[440px]:gap-4">
         <Receipt r={s.receipt} className="min-[440px]:rotate-[-2deg] shadow-[0_12px_0_-8px_rgba(20,22,26,0.08)]" />
         <ReviewCard v={s.review} />
       </div>

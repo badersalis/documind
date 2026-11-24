@@ -28,7 +28,7 @@ export function WaitlistBlock({ t, heading = true }: { t: Dictionary; heading?: 
         {mode === "live" ? (
           <WaitlistForm t={w.form} />
         ) : (
-          <div className="rounded-lg bg-white p-6 text-ink sm:p-7">
+          <div className="on-paper rounded-lg bg-white p-6 text-ink sm:p-7">
             <p className="text-lg">
               {site.contactEmail || site.whatsapp ? (mode === "paused" ? w.pausedText : w.contactText) : w.contactPending}
             </p>

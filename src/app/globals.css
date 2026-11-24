@@ -12,6 +12,8 @@
   --color-muted: #5b6270;
   --color-receipt: #f4f5f7;
   --color-rule: #dde1e8;
+  /* Form control borders: 3.4:1 on white (WCAG 1.4.11). */
+  --color-control: #858c98;
   --color-danger: #b42318;
 
   --font-display: var(--font-schibsted), "Arial Narrow", Arial, sans-serif;
@@ -55,6 +57,11 @@
   .on-stamp :focus-visible {
     outline-color: #ffffff;
   }
+  /* White panels inside a blue section (waitlist form, contact card): back to the blue ring,
+     or the white ring disappears against the white panel (WCAG 2.4.7). */
+  .on-stamp .on-paper :focus-visible {
+    outline-color: var(--color-stamp);
+  }
 }
 
 @layer components {
@@ -84,6 +91,8 @@
 
   /* Highlighter stroke on fields the product reads. */
   .marker {
+    /* <mark> has a UA yellow background: clear it, or it fills the soft ends and hides the sweep. */
+    background-color: transparent;
     background-image: linear-gradient(100deg, #ffe14d00 1%, var(--color-marker) 4% 95%, #ffe14d00 99%);
     background-repeat: no-repeat;
     background-size: 100% 100%;

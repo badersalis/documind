@@ -76,7 +76,7 @@ export const fr = {
       categoryLabel: "Catégorie proposée",
       category: "Achats de matériaux",
       categoryHint: "à confirmer",
-      validate: "Valider",
+      validate: rev("Valider", "Vérifier"),
       stamp: rev("Vérifié par vous", "Prêt à transmettre"),
     },
     export: {
@@ -103,7 +103,7 @@ export const fr = {
     meta: {
       title: "Tikéo : vos reçus et factures, classés et prêts pour votre comptable",
       description:
-        "Photographiez vos reçus et factures fournisseurs. Tikéo extrait les montants, propose une catégorie et vous validez. Conçu pour les entreprises en Côte d'Ivoire. En cours de développement.",
+        "Photographiez vos reçus et factures : Tikéo lit les montants et propose une catégorie. Conçu pour les entreprises en Côte d'Ivoire. En cours de développement.",
     },
     hero: {
       h1: "Vos reçus et factures, classés et prêts pour votre comptable.",
@@ -143,7 +143,10 @@ export const fr = {
         },
         {
           title: "Avec vos outils, pas à leur place.",
-          text: "Tikéo ne remplace ni votre comptable, ni votre logiciel. Il les alimente.",
+          text: exp(
+            "Tikéo ne remplace ni votre comptable, ni votre logiciel. Il les alimente.",
+            "Tikéo ne remplace ni votre comptable, ni votre logiciel. Il les complète.",
+          ),
         },
         ...(hasClaim("review")
           ? [
@@ -165,7 +168,7 @@ export const fr = {
         },
         {
           title: "Indépendants",
-          text: "Photographiez au fil de l'eau, validez en un coup d'œil.",
+          text: rev("Photographiez au fil de l'eau, validez en un coup d'œil.", "Photographiez au fil de l'eau, retrouvez tout classé."),
           href: "/cas-d-usage#independants",
         },
         {
@@ -175,7 +178,7 @@ export const fr = {
         },
         {
           title: "Équipes finance",
-          text: "Des factures fournisseurs pré-classées, prêtes à intégrer.",
+          text: exp("Des factures fournisseurs pré-classées, prêtes à intégrer.", "Des factures fournisseurs lues et pré-classées."),
           href: "/cas-d-usage#equipes-finance",
         },
       ],
@@ -210,7 +213,8 @@ export const fr = {
   accountantBand: {
     h2: "Expert-comptable ? Recevez des pièces déjà lues et pré-classées.",
     text:
-      "Vos clients photographient leurs pièces ; vous recevez des données à réviser, traçables jusqu'au document d'origine. Vous gardez la validation finale.",
+      "Vos clients photographient leurs pièces ; vous recevez des données à réviser, traçables jusqu'au document d'origine." +
+      rev(" Vous gardez la validation finale.", ""),
     cta: "Découvrir Tikéo pour les cabinets",
     href: "/cas-d-usage#experts-comptables",
   },
@@ -261,7 +265,10 @@ export const fr = {
     meta: {
       title: "Fonctionnalités : lecture, classement, export",
       description:
-        "Lecture des reçus et factures, catégories adaptées à la Côte d'Ivoire, validation par vous, export pour votre comptable. Les fonctionnalités prévues de Tikéo.",
+        "Lecture des reçus et factures, catégories adaptées à la Côte d'Ivoire" +
+        rev(", validation par vous", "") +
+        exp(", export pour votre comptable", "") +
+        ". Les fonctionnalités prévues de Tikéo.",
     },
     h1: "Ce que Tikéo fera pour vous.",
     intro: "Tikéo est en cours de développement. Voici ce que nous construisons, et pourquoi.",
@@ -322,7 +329,7 @@ export const fr = {
         id: "independants",
         label: "Indépendants",
         eyebrow: "Indépendants",
-        h2: "Photographiez au fil de l'eau, validez en un coup d'œil.",
+        h2: rev("Photographiez au fil de l'eau, validez en un coup d'œil.", "Photographiez au fil de l'eau, retrouvez tout classé."),
         text:
           "Consultant, artisan, prestataire : gardez vos reçus sur votre téléphone, classés au fur et à mesure. Quand votre comptable les demande, tout est prêt.",
         points: [] as string[],
@@ -338,15 +345,15 @@ export const fr = {
           exp(", à réviser et à exporter.", ", à réviser."),
         points: [
           "Des données traçables jusqu'à la pièce d'origine.",
-          "Vous gardez la validation finale : Tikéo propose, vous signez.",
-          "Conçu pour s'intégrer à vos outils, pas pour les remplacer.",
+          ...(hasClaim("review") ? ["Vous gardez la validation finale : Tikéo propose, vous signez."] : []),
+          "Conçu pour compléter vos outils, pas pour les remplacer.",
         ],
       },
       {
         id: "equipes-finance",
         label: "Équipes finance",
         eyebrow: "Équipes finance et administration",
-        h2: "Des factures fournisseurs pré-classées, prêtes à intégrer.",
+        h2: exp("Des factures fournisseurs pré-classées, prêtes à intégrer.", "Des factures fournisseurs lues et pré-classées."),
         text: exp(
           "Notes de frais et factures arrivent lues et pré-classées. Vous vérifiez, puis vous intégrez dans Sage, Odoo ou Excel.",
           "Notes de frais et factures arrivent lues et pré-classées. Vous vérifiez, puis vous les transmettez.",
@@ -391,7 +398,10 @@ export const fr = {
           {
             id: "erp",
             q: "Est-ce un logiciel de comptabilité ou un ERP ?",
-            a: "Non. Tikéo s'occupe d'une seule chose, vos pièces de dépenses, et alimente les outils que vous utilisez déjà.",
+            a: exp(
+              "Non. Tikéo s'occupe d'une seule chose, vos pièces de dépenses, et alimente les outils que vous utilisez déjà.",
+              "Non. Tikéo s'occupe d'une seule chose, vos pièces de dépenses, et complète les outils que vous utilisez déjà.",
+            ),
           },
           {
             id: "fne",
@@ -407,8 +417,8 @@ export const fr = {
             id: "erreurs",
             q: "Tikéo peut-il se tromper ?",
             a: rev(
-              "Oui, comme toute lecture automatique, surtout sur une photo floue ou une pièce manuscrite. C'est pourquoi chaque information est mise en évidence sur la pièce et rien n'est enregistré sans votre validation.",
-              "Oui, comme toute lecture automatique, surtout sur une photo floue ou une pièce manuscrite. C'est pourquoi chaque information est mise en évidence sur la pièce, pour que vous puissiez la contrôler.",
+              "Oui, comme tout outil qui lit des documents, surtout sur une photo floue ou une pièce manuscrite. C'est pourquoi chaque information est mise en évidence sur la pièce et rien n'est enregistré sans votre validation.",
+              "Oui, comme tout outil qui lit des documents, surtout sur une photo floue ou une pièce manuscrite. C'est pourquoi chaque information est mise en évidence sur la pièce, pour que vous puissiez la contrôler.",
             ),
           },
         ],

@@ -18,6 +18,8 @@ Copy marked with a flag must not ship until its condition is met (positioning §
 
 If a flag can't be cleared by launch, use the **fallback** line given next to it.
 
+**Code is the reference for flags (QA 2026-11-24):** QA found more lines that depend on [REV] or [EXP] than are marked below (for example « validez en un coup d'œil », « vous signez », « Il les alimente », « prêtes à intégrer »). They are flagged in `src/content/fr.ts`; see `qa/qa-report-2026-11-24.md` §4.
+
 ---
 
 ## 1. Accueil (`/`)

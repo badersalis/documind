@@ -25,10 +25,14 @@ export function Header({ t }: { t: Dictionary["nav"] }) {
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    // Keep keyboard and screen-reader focus inside the open menu (WCAG 2.4.11).
+    const behind = document.querySelectorAll<HTMLElement>("main, footer");
+    behind.forEach((el) => (el.inert = true));
     sheetRef.current?.querySelector<HTMLElement>("a")?.focus();
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      behind.forEach((el) => (el.inert = false));
     };
   }, [open, close]);
 

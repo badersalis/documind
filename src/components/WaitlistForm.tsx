@@ -31,7 +31,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
   useEffect(() => {
     if (state.status === "success") successRef.current?.focus();
     if (state.status === "error") {
-      formRef.current?.querySelector<HTMLElement>("[aria-invalid=true]")?.focus();
+      formRef.current?.querySelector<HTMLElement>("[aria-invalid=true], [data-invalid=true]")?.focus();
     }
   }, [state]);
 
@@ -40,7 +40,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
 
   if (state.status === "success") {
     return (
-      <div className="rounded-lg border border-rule bg-white p-6 text-ink" role="status">
+      <div className="on-paper rounded-lg border border-rule bg-white p-6 text-ink" role="status">
         <div className="flex items-center gap-3">
           <span className="inline-flex size-10 items-center justify-center rounded-full bg-stamp-tint text-stamp">
             <Tick className="h-4 w-5" />
@@ -64,6 +64,14 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
     });
   };
 
+  // Validate on blur, except when focus is moving to the submit button: rendering an error there
+  // pushes the button down between mousedown and mouseup, so the first press would miss it.
+  // onSubmit validates every field anyway.
+  const onBlurCheck = (name: "email" | "whatsapp") => (e: React.FocusEvent<HTMLInputElement>) => {
+    if ((e.relatedTarget as HTMLButtonElement | null)?.type === "submit") return;
+    checkField(name, e.currentTarget.value);
+  };
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const data = new FormData(e.currentTarget);
     const next: Errors = {};
@@ -74,7 +82,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
     setClientErrors(next);
     if (Object.keys(next).length) {
       e.preventDefault();
-      requestAnimationFrame(() => formRef.current?.querySelector<HTMLElement>("[aria-invalid=true]")?.focus());
+      requestAnimationFrame(() => formRef.current?.querySelector<HTMLElement>("[aria-invalid=true], [data-invalid=true]")?.focus());
     }
   };
 
@@ -86,14 +94,14 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
     ) : null;
 
   const radioCls =
-    "flex min-h-11 cursor-pointer items-center gap-3 rounded-ui border border-rule bg-white px-3 py-2 has-[:checked]:border-stamp has-[:checked]:bg-stamp-tint";
+    "flex min-h-11 cursor-pointer items-center gap-3 rounded-ui border border-control bg-white px-3 py-2 has-[:checked]:border-stamp has-[:checked]:bg-stamp-tint";
   const inputCls =
-    "mt-1.5 block w-full min-h-12 rounded-ui border border-[#9aa1ad] bg-white px-3 text-base text-ink aria-[invalid=true]:border-danger";
+    "mt-1.5 block w-full min-h-12 rounded-ui border border-control bg-white px-3 text-base text-ink aria-[invalid=true]:border-danger";
 
   const hasErrors = Object.keys(errors).length > 0;
 
   return (
-    <form ref={formRef} action={action} onSubmit={onSubmit} noValidate className="grid gap-6 rounded-lg bg-white p-5 text-ink sm:p-7">
+    <form ref={formRef} action={action} onSubmit={onSubmit} noValidate className="on-paper grid gap-6 rounded-lg bg-white p-5 text-ink sm:p-7">
       <div aria-live="polite" className="sr-only">
         {hasErrors ? t.errorSummary : ""}
       </div>
@@ -116,7 +124,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
           required
           aria-invalid={errors.email ? true : undefined}
           aria-describedby={errors.email ? id("email-err") : undefined}
-          onBlur={(e) => checkField("email", e.currentTarget.value)}
+          onBlur={onBlurCheck("email")}
           className={inputCls}
         />
         {msg("email")}
@@ -142,7 +150,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
                     return next;
                   });
                 }}
-                aria-invalid={i === 0 && errors.role ? true : undefined}
+                data-invalid={errors.role && i === 0 ? "true" : undefined}
                 className="size-5 accent-stamp"
               />
               <span>{r.label}</span>
@@ -197,7 +205,7 @@ export function WaitlistForm({ t }: { t: Dictionary["waitlist"]["form"] }) {
             defaultValue="+225 "
             aria-invalid={errors.whatsapp ? true : undefined}
             aria-describedby={`${id("whatsapp-help")}${errors.whatsapp ? ` ${id("whatsapp-err")}` : ""}`}
-            onBlur={(e) => checkField("whatsapp", e.currentTarget.value)}
+            onBlur={onBlurCheck("whatsapp")}
             className={`${inputCls} max-w-[16rem]`}
           />
           {msg("whatsapp")}

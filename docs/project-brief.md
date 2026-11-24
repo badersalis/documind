@@ -1,6 +1,6 @@
 # Project Brief — Tikéo (formerly Documind)
 
-_Last updated: 2026-11-24 (deliverable 4 started: site built in Direction A, contact-only waitlist) · Phase: 2 (Visual direction) · Owner: Founder_
+_Last updated: 2026-11-24 (deliverable 5 first QA pass done on the local build) · Phase: 2 (Visual direction) · Owner: Founder_
 
 > **Name (decided 2026-11-23, D-013):** **Tikéo**, from *ticket de caisse*. Write it **Tikéo** (capital T, accented é) in brand and copy; use **tikeo** (no accent, lowercase) in domains, handles, code and URLs. "Documind" was the working name and is retired; the repository folder keeps its old name for now. The name is not yet trademark-cleared (see R3).
 
@@ -35,7 +35,7 @@ _Last updated: 2026-11-24 (deliverable 4 started: site built in Direction A, con
 2. Brand identity and visual direction. _Name chosen (Tikéo, D-013). Design research and three visual directions done (`brand/design-research.md`, `brand/visual-direction.md`); **Direction A "Le reçu vérifié" approved, é-tick wordmark approved, no photography (D-014, 2026-11-24).** Asset plan in `brand/asset-sourcing.md`. Formal trademark search still recommended before paid identity spend._
 3. Website structure, messaging and UX. _First draft done: `site/information-architecture.md`, `site/page-copy-fr.md`, `site/waitlist-ux.md`. Founder review pending; D-015 open._
 4. Design and build of a polished, responsive marketing site. _First build done (2026-11-24): all 8 routes, French copy with claim flags, waitlist in contact-only mode, launch gate (`npm run check:launch`). See `README.md`._
-5. Review for quality, accessibility, SEO, responsiveness, performance and claims
+5. Review for quality, accessibility, SEO, responsiveness, performance and claims. _First pass done on the local build (`qa/qa-report-2026-11-24.md`): 10 findings, all fixed. Second pass needs a deployed preview (Lighthouse, real devices, live form)._
 
 **Pages:** Home · How It Works · Features · Use Cases (with an accountant section) · FAQ (trust-heavy) · Contact / Join the Waitlist · Privacy notice · Pricing (only if a pricing strategy exists, D-007)
 
