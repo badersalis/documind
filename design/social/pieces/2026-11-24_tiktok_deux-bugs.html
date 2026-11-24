@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>2026-11-24 · TikTok photo carousel · Deux bugs (DRAFT)</title>
+<link rel="stylesheet" href="../kit.css">
+<!--
+  TikTok photo mode, 5 frames, 1080×1920, big centred text in the TikTok safe area (.tt). Pattern: before/after + under the hood (studio showcase).
+  Story: two real bugs found in WaitlistForm.tsx while capturing it for a post, fixed 2026-11-24 (QA report §7, findings 11–12).
+  Frame 02 "avant" = pre-fix CSS rule re-applied, labelled "reconstitué". All images are real captures of the local site, fictional data.
+  Register: "tu" (TikTok). Sound: none chosen; business accounts must use the Commercial Music Library or original audio.
+  DRAFT until copywriting + founder review. Alt text: spec §13.
+-->
+<style>.g-stamp .real::before { background: var(--marker); }</style>
+</head>
+<body>
+<div class="sheet">
+
+<!-- 01 Hook -->
+<section class="slide f-9x16 tt g-stamp" data-name="01">
+  <div class="safe c">
+    <p class="h-tt">J'ai trouvé 2&nbsp;bugs dans mon formulaire.</p>
+    <p class="body muted" style="margin-top:48px">En préparant un post sur ce même formulaire.</p>
+  </div>
+</section>
+
+<!-- 02 Bug 1, before -->
+<section class="slide f-9x16 tt g-paper" data-name="02">
+  <div class="safe c">
+    <p class="h-tt">Bug&nbsp;1&#8239;: le focus clavier, invisible.</p>
+    <div class="doc crop" style="margin-top:80px;width:850px;height:288px">
+      <img src="../../../media/demo/2026-11-24/tikeo-site-form-crop_focus-before-reconstructed_2026-11-24.png" alt="" style="width:870px;left:-10px;top:-10px">
+    </div>
+    <p class="body-s muted" style="margin-top:48px">Anneau blanc sur carte blanche. Avant · reconstitué</p>
+  </div>
+</section>
+
+<!-- 03 Bug 1, after -->
+<section class="slide f-9x16 tt g-paper" data-name="03">
+  <div class="safe c">
+    <p class="h-tt">Corrigé&#8239;: un anneau bleu de 3&nbsp;px.</p>
+    <div class="doc crop" style="margin-top:80px;width:850px;height:288px">
+      <img src="../../../media/demo/2026-11-24/tikeo-site-form-crop_focus-after_2026-11-24.png" alt="" style="width:870px;left:-10px;top:-10px">
+    </div>
+    <p class="real" style="margin-top:48px">Capture réelle · après correction</p>
+  </div>
+</section>
+
+<!-- 04 Bug 2 -->
+<section class="slide f-9x16 tt g-paper" data-name="04">
+  <div class="safe c">
+    <p class="h-tt" style="font-size:84px">Bug&nbsp;2&#8239;: le 1<sup style="font-size:.5em">er</sup>&nbsp;clic tombait à&nbsp;côté.</p>
+    <div class="doc crop" style="margin-top:40px;width:700px;height:904px">
+      <img src="../../../media/demo/2026-11-24/tikeo-site-form-crop_whatsapp-error-button_2026-11-24.png" alt="" style="width:700px;left:0;top:0">
+    </div>
+    <p class="body-s" style="margin-top:28px">L'erreur poussait le bouton pendant le&nbsp;clic.</p>
+  </div>
+</section>
+
+<!-- 05 CTA -->
+<section class="slide f-9x16 tt g-stamp" data-name="05">
+  <div class="safe c">
+    <p class="h-tt">Le design, c'est aussi ce qui se passe au&nbsp;clavier.</p>
+    <p class="h-m" style="margin-top:70px">Un projet&#8239;? Écris-moi.</p>
+    <span class="real" style="margin-top:70px">Formulaire testé en local · pas encore en ligne</span>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

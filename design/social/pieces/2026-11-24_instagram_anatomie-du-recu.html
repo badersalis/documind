@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>2026-11-24 · Instagram · Anatomie d'un composant : le reçu (DRAFT)</title>
+<link rel="stylesheet" href="../kit.css">
+<!--
+  Instagram feed carousel, 6 × 1080×1350. Pattern: "anatomy of a component" (studio showcase; Instagram favours craft and saves).
+  Subject: the receipt illustration on the Tikéo site (src/components/illustrations/Receipt.tsx + .receipt-paper / .marker in globals.css).
+  Images: real element captures at 4× from the local site, transparent background (media/demo/2026-11-24/tikeo-site-el-receipt_*).
+  Sweep frames are the site's own animation, paused at 0 ms and 300 ms with the Web Animations API.
+  Receipt data is the site's fictional sample. DRAFT until copywriting + founder review. Alt text: spec §13.
+-->
+<style>
+  .frame-label { font-size: 28px; font-weight: 600; color: var(--stamp); font-feature-settings: "tnum"; width: 120px; flex: none; }
+  .sweep-row { display: flex; align-items: center; gap: 24px; }
+  .g-stamp .real::before { background: var(--marker); }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+<!-- 01 Hook -->
+<section class="slide f-4x5 g-stamp" data-name="01">
+  <div class="safe">
+    <div class="top"><span class="meta muted">Anatomie d'un composant</span><span class="counter">1/6</span></div>
+    <p class="h-xl" style="margin-top:90px">Ce reçu n'est pas une&nbsp;image.</p>
+    <img class="art tilt" src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_final_2026-11-24.png" alt="" style="width:720px;margin-top:80px;align-self:center;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))">
+    <div class="bottom">
+      <span class="real">Composant du site Tikéo · données fictives</span>
+      <span class="meta muted">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 Type -->
+<section class="slide f-4x5 g-paper" data-name="02">
+  <div class="safe">
+    <div class="top"><span class="state"><span class="n">1</span>Typographie</span><span class="counter">2/6</span></div>
+    <div class="mid">
+      <p class="h-m">Du vrai texte, en IBM&nbsp;Plex&nbsp;Mono.</p>
+      <div class="crop" style="margin-top:56px;width:904px;height:600px">
+        <img src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_final_2026-11-24.png" alt="" style="width:904px;left:0;top:0">
+      </div>
+      <p class="body-s" style="margin-top:48px">Les montants viennent du fichier de contenu&#8239;: traduire, c'est éditer du&nbsp;texte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 Torn edge -->
+<section class="slide f-4x5 g-paper" data-name="03">
+  <div class="safe">
+    <div class="top"><span class="state"><span class="n">2</span>Le bord déchiré</span><span class="counter">3/6</span></div>
+    <div class="mid">
+      <p class="h-m">Pas d'image&#8239;: un masque&nbsp;CSS.</p>
+      <div class="crop" style="margin-top:56px;width:904px;height:268px">
+        <img src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_final_2026-11-24.png" alt="" style="width:904px;left:0;top:-428px">
+      </div>
+<pre class="code" style="margin-top:48px;font-size:28px"><span class="k">mask</span>: conic-gradient(…)
+  bottom / <span class="s">16px 10px</span> repeat-x;</pre>
+    </div>
+  </div>
+</section>
+
+<!-- 04 Marker sweep (real frames of the site's animation) -->
+<section class="slide f-4x5 g-paper" data-name="04">
+  <div class="safe">
+    <div class="top"><span class="state"><span class="n">3</span>Le surligneur</span><span class="counter">4/6</span></div>
+    <div class="mid">
+      <p class="h-m">Il surligne ce que Tikéo lira, en&nbsp;0,6&nbsp;s.</p>
+      <div style="margin-top:56px;display:grid;gap:20px">
+        <div class="sweep-row"><span class="frame-label">0&nbsp;ms</span><div class="crop" style="width:760px;height:110px"><img src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_sweep-0_2026-11-24.png" alt="" style="width:1100px;left:-170px;top:-30px"></div></div>
+        <div class="sweep-row"><span class="frame-label">300&nbsp;ms</span><div class="crop" style="width:760px;height:110px"><img src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_sweep-300ms_2026-11-24.png" alt="" style="width:1100px;left:-170px;top:-30px"></div></div>
+        <div class="sweep-row"><span class="frame-label">600&nbsp;ms</span><div class="crop" style="width:760px;height:110px"><img src="../../../media/demo/2026-11-24/tikeo-site-el-receipt_final_2026-11-24.png" alt="" style="width:1100px;left:-170px;top:-30px"></div></div>
+      </div>
+      <p class="body-s" style="margin-top:48px">Coupé quand l'appareil demande moins d'animations.</p>
+    </div>
+    <div class="bottom" style="justify-content:flex-start"><span class="real">Images réelles de l'animation du site</span></div>
+  </div>
+</section>
+
+<!-- 05 Why code -->
+<section class="slide f-4x5 g-paper" data-name="05">
+  <div class="safe">
+    <div class="top"><span class="meta muted">Pourquoi du code&#8239;?</span><span class="counter">5/6</span></div>
+    <div class="mid">
+      <p class="h-l">Une image aurait été plus simple. Pas&nbsp;meilleure.</p>
+      <ul class="list" style="margin-top:64px">
+        <li><span class="n">1</span>Net à toutes les tailles</li>
+        <li><span class="n">2</span>Traduit comme le reste du site</li>
+        <li><span class="n">3</span>Aucune image à télécharger</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 06 CTA -->
+<section class="slide f-4x5 g-stamp" data-name="06">
+  <div class="safe">
+    <div class="top"><span class="meta muted">Un site ou une app à lancer&#8239;?</span><span class="counter">6/6</span></div>
+    <p class="h-l" style="margin-top:220px">Le soin du détail, du design au&nbsp;code.</p>
+    <p class="body" style="margin-top:56px">Envoyez-moi un message.</p>
+    <div class="bottom"><span class="badge">Tikéo · en cours de développement</span></div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>

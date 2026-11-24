@@ -1,0 +1,115 @@
+/* Tikéo social kit — Direction A "Le reçu vérifié" (docs/brand/visual-direction.md, D-014).
+   Spec and rules: docs/design/social-visual-system.md. Canvas units are real pixels. */
+
+@font-face { font-family: "Schibsted Grotesk"; font-weight: 700; src: url(fonts/schibsted-700.woff2) format("woff2"); }
+@font-face { font-family: Inter; font-weight: 100 900; src: url(fonts/inter.woff2) format("woff2"); }
+/* Plex Mono: receipt lettering ONLY (visual-direction §3.2). Never headings, labels or tags. */
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; src: url(fonts/plex-mono.woff2) format("woff2"); }
+
+:root {
+  --ink: #14161a; --paper: #ffffff; --stamp: #1f3fd1; --on-stamp: #dfe5ff;
+  --marker: #ffe14d; --muted: #5b6270; --receipt: #f4f5f7; --rule: #dde1e8;
+  --m: 88px;            /* outer margin (≥ 64) */
+  --u: 8px;             /* grid unit */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #e9ebef; font-family: Inter, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+.sheet { display: flex; flex-wrap: wrap; gap: 40px; padding: 40px; }
+
+/* ---------- Canvases ---------- */
+.slide { position: relative; overflow: hidden; flex: none; background: var(--paper); color: var(--ink); }
+.f-4x5   { width: 1080px; height: 1350px; }   /* LinkedIn carousel, Instagram feed */
+.f-9x16  { width: 1080px; height: 1920px; }   /* Stories, Reels/TikTok covers */
+.f-1x1   { width: 1080px; height: 1080px; }
+.f-og    { width: 1200px; height: 630px; }    /* link previews (the site's own OG image is generated in code) */
+
+/* Grounds (colour roles) */
+.g-paper   { background: var(--paper); color: var(--ink); }
+.g-stamp   { background: var(--stamp); color: #fff; }
+.g-receipt { background: var(--receipt); color: var(--ink); }
+
+/* Safe areas */
+.safe       { position: absolute; inset: var(--m); display: flex; flex-direction: column; }
+.f-9x16 .safe { top: 260px; bottom: 360px; left: 96px; right: 96px; }  /* clears story UI top/bottom */
+
+/* ---------- Type scale (1080 canvas) ---------- */
+.h-xl { font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 104px; line-height: 1.02; letter-spacing: -0.025em; text-wrap: balance; }
+.h-l  { font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 80px;  line-height: 1.04; letter-spacing: -0.02em;  text-wrap: balance; }
+.h-m  { font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 60px;  line-height: 1.08; letter-spacing: -0.02em;  text-wrap: balance; }
+.body { font-size: 36px; line-height: 1.42; text-wrap: pretty; }
+.body-s { font-size: 30px; line-height: 1.42; }
+.meta { font-size: 28px; line-height: 1.3; font-weight: 500; }   /* minimum size on a 1080 canvas */
+.muted { color: var(--muted); }
+.g-stamp .muted { color: var(--on-stamp); }
+.tnum { font-feature-settings: "tnum"; }
+
+/* Marker: highlight behind ink text, one per slide. Never marker-coloured text. */
+.mark { background: linear-gradient(transparent 12%, var(--marker) 12%, var(--marker) 88%, transparent 88%); padding: 0 .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; color: var(--ink); }
+
+/* ---------- Components ---------- */
+/* Wordmark: é accent drawn as a tick (concept, visual-direction §3.3) */
+.wordmark { font-family: "Schibsted Grotesk"; font-weight: 700; letter-spacing: -0.03em; line-height: 1; display: inline-flex; align-items: flex-end; }
+.wordmark .e { position: relative; display: inline-block; }
+.wordmark svg { position: absolute; left: 50%; top: -0.3em; height: .36em; width: .5em; transform: translateX(-46%); color: var(--stamp); }
+.g-stamp .wordmark svg { color: var(--marker); }
+
+/* "En cours de développement" badge — ink outline, blue dot (white on blue grounds) */
+.badge { display: inline-flex; align-items: center; gap: 14px; font-size: 28px; font-weight: 500; border: 2.5px solid currentColor; border-radius: 999px; padding: 10px 26px; align-self: flex-start; }
+.badge::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--stamp); }
+.g-stamp .badge::before { background: var(--marker); }
+
+/* Header row: wordmark left, counter right */
+.top { display: flex; justify-content: space-between; align-items: center; }
+.counter { font-size: 28px; font-weight: 500; font-feature-settings: "tnum"; color: var(--muted); }
+.g-stamp .counter { color: var(--on-stamp); }
+
+/* Footer row: pinned to the bottom of the safe area */
+.bottom { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+
+/* Rule-separated list (problem / checklist) */
+.list { list-style: none; border-top: 2px solid var(--rule); }
+.list li { border-bottom: 2px solid var(--rule); padding: 30px 0; font-size: 40px; font-weight: 600; display: flex; gap: 28px; align-items: center; }
+.list li .n { font-family: "Schibsted Grotesk"; font-weight: 700; color: var(--stamp); width: 48px; }
+
+/* Document frame: crop of a real capture, or an illustration. Paper isn't round (2px). */
+.doc { border-radius: 2px; overflow: hidden; background: var(--paper); box-shadow: 0 2px 0 var(--rule), 0 40px 80px -30px rgba(20,22,26,.35); }
+.crop { position: relative; overflow: hidden; }
+.crop img { position: absolute; display: block; }
+
+/* CONCEPT tag — required on any slide showing a drawing of the product */
+.concept { display: inline-flex; align-items: center; gap: 14px; font-size: 28px; font-weight: 500; color: var(--muted); line-height: 1.3; }
+.concept b { font-weight: 700; font-size: 24px; letter-spacing: .06em; background: var(--marker); color: var(--ink); padding: 4px 10px; border-radius: 2px; flex: none; }
+.g-stamp .concept { color: var(--on-stamp); }
+
+/* Locked components: use only with verified sources (see spec §6) */
+.stat-number { font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 220px; line-height: .95; letter-spacing: -0.04em; font-feature-settings: "tnum"; }
+.source { font-size: 28px; color: var(--muted); }
+
+/* ---------- TikTok (added 2026-11-24) ---------- */
+/* Photo-mode / video frames: clear the top tabs (170), the caption + sound bar (bottom 520)
+   and the right-hand action buttons (150). */
+.tt .safe { top: 170px; bottom: 520px; left: 80px; right: 150px; }
+/* Video cover: keep text in the band that survives the profile-grid crop (3:4 and 4:5). */
+.tt-cover .safe { top: 420px; bottom: 420px; left: 110px; right: 110px; }
+/* Centred composition (TikTok wants big, centred text) */
+.safe.c { align-items: center; justify-content: center; text-align: center; }
+.safe.c .badge, .safe.c .concept { align-self: center; }
+.h-tt { font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 96px; line-height: 1.04; letter-spacing: -0.025em; text-wrap: balance; }
+
+/* Site illustration crops (element screenshots at 4×). Place on the ground they were captured on. */
+.art { display: block; height: auto; }
+.tilt { transform: rotate(-3deg); }
+
+/* ---------- Studio showcase (proposed 2026-11-24, spec §12) ---------- */
+/* .code uses Plex Mono: an exception to the receipts-only rule, pending founder approval. */
+.state { display: inline-flex; align-items: center; gap: 14px; font-size: 28px; font-weight: 600; color: var(--stamp); }
+.state .n { display: inline-flex; width: 48px; height: 48px; border-radius: 50%; background: var(--stamp); color: #fff; align-items: center; justify-content: center; font-family: "Schibsted Grotesk"; font-weight: 700; font-size: 26px; }
+.real { font-size: 28px; font-weight: 500; color: var(--muted); }
+.real::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: #1f8a4c; margin-right: 12px; vertical-align: 2px; }
+.note { border-left: 6px solid var(--marker); padding: 6px 0 6px 28px; font-size: 30px; line-height: 1.42; }
+.mid { margin-block: auto; display: flex; flex-direction: column; }
+.code { font-family: "IBM Plex Mono", monospace; font-size: 32px; line-height: 1.5; background: var(--receipt); border-radius: 2px; padding: 36px 40px; white-space: pre; color: var(--ink); }
+.code .c { color: var(--muted); } .code .k { color: var(--stamp); font-weight: 400; } .code .s { background: #fff3a8; }
+.g-stamp .real { color: var(--on-stamp); }
+.g-stamp .state { color: #fff; } .g-stamp .state .n { background: #fff; color: var(--stamp); }

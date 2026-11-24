@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# demo captures and other large media (kept out of git; see docs/design/asset-register.csv)
+/media/
